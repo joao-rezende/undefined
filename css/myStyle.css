@@ -1,0 +1,284 @@
+body {
+    background-color: #262626;
+}
+
+header.masthead {
+    position: relative;
+}
+
+header.masthead canvas {
+    width: 95%;
+    height: 78%;
+    position: absolute;
+    top: 5%;
+    left: 2.5%;
+    z-index: 1;
+}
+
+header.masthead .fundo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+    background-color: rgba(26, 26, 26, 0.7);
+}
+
+header.masthead .conteudo-inicial {
+    position: relative;
+    z-index: 3;
+}
+
+.separator {
+    z-index: 3;
+    position: relative;
+}
+
+.separator-left {
+    margin-top: -1px;
+    width: 0%;
+    height: 1px;
+    background-color: #FED136;
+    transition: width ease-out 0.8s;
+}
+
+.separator-left.complete {
+    width: 60%;
+}
+
+.separator-fundo {
+    float: right;
+    width: 0%;
+    height: 1px;
+    background-color: rgba(26, 26, 26, 0.7);
+    height: 11px;
+    transition: width ease-out 1.4s;
+    opacity: 0.6;
+}
+
+.separator-fundo.complete {
+    width: 100%;
+}
+
+.separator-right {
+    margin-top: -1px;
+    float: right;
+    width: 0%;
+    height: 1px;
+    background-color: #FED136;
+    transition: width ease-out 1.3s;
+}
+
+.separator-right.complete {
+    width: 82%;
+}
+
+.bg-light {
+    color: #262626;
+}
+
+@media(min-width: 768px) {
+    .animate-in {
+        opacity: 0;
+        position: relative;
+        transition-property: all;
+        transition-duration: 0.7s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .in-right {
+        left: -80%;
+    }
+
+    .in-right.complete {
+        opacity: 1;
+        left: 0;
+    }
+
+    .in-left {
+        right: -80%;
+    }
+
+    .in-left.complete {
+        opacity: 1;
+        right: 0;
+    }
+
+    .in-top {
+        transform: translateY(50%);
+    }
+
+    .in-top.complete {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    .grow {
+        transform: scale(0.5);
+    }
+
+    .grow.complete {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+
+    .timeline>li:not(:last-child):after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        margin-left: -1.5px;
+        content: "";
+        background-color: #e9ecef;
+        margin-top: 170px;
+        height: 0px;
+        transition: height ease-in 0.3s;
+    }
+
+    .timeline>li.complete:not(:last-child):after {
+        height: 110px;
+    }
+}
+
+.barras {
+    height: 10px;
+    margin: 0 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    width: 60px;
+}
+
+.barra-preta {
+    background-color: #262626;
+}
+
+.barra-amarela {
+    background-color: #FED136;
+}
+
+#barra-um.complete {
+    height: 89px;
+}
+
+#barra-dois.complete {
+    height: 149px;
+}
+
+#barra-tres.complete {
+    height: 209px;
+}
+
+#barra-quatro.complete {
+    height: 269px;
+}
+
+@media(max-width: 768px) {
+    #celular {
+        height: 420px;
+    }
+
+    header.masthead .masthead-heading {
+        font-size: 2.75rem;
+    }
+
+    #fundo-grafico canvas {
+        margin-top: 40px;
+        width: 105%;
+        margin-left: -10%;
+    }
+}
+
+#video-inicio iframe {
+    display: block;
+    margin: 0 auto 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 25px -5px rgba(10, 5, 1, 0.8);
+}
+
+header.masthead .masthead-heading {
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: #FED136;
+    padding: 25px 50px 0px;
+}
+
+header.masthead {
+    padding-top: 4rem;
+    padding-bottom: 4.5rem;
+}
+
+.fundo-moeda-amarela {
+    background-image: url("/assets/img/moeda-bitcoin-amarela.png");
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: -28px;
+    opacity: 0.15;
+    right: -70px;
+}
+
+.fundo-moeda {
+    transform: rotate(-25deg);
+    top: 220px;
+    right: -150px;
+    opacity: 0.1;
+    width: 40%;
+    position: absolute;
+}
+
+@media (max-height: 780px) {
+    header.masthead {
+      padding-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .fundo-moeda-amarela {
+        width: 250px;
+        height: 250px;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        top: -10px;
+        opacity: 0.1;
+        right: -70px;
+    }
+
+    .fundo-moeda {
+        top: 240px;
+        left: -190px;
+        width: 150%;
+        position: absolute;
+    }
+
+    header.masthead .masthead-heading {
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    header.masthead {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    #video-inicio iframe {
+        width: 710.8px;
+        height: 400px;
+    }
+}
+
+@media (min-width: 1400px) {
+    #video-inicio iframe {
+        width: 853px;
+        height: 480px;
+        margin: 0 auto 30px;
+    }
+}
